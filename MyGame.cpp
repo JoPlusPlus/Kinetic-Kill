@@ -1338,8 +1338,7 @@ void DropADrop(float dt, Player& player) {
 
             // crystal
             if (dropBag[i].type == 0) {
-                if (!IsLevelTwo) player.LVL1Score += 10;
-                else player.GameOverTimer += 5;
+                player.LVL1Score += 10;
                 healthsound.play();
                 dropBag.erase(dropBag.begin() + i);
             }
