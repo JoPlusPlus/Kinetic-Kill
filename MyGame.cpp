@@ -866,7 +866,7 @@ void GamePlay() {
         window.display();
 
         // check win
-        if (player.LVL1Score >= 10) {
+        if (player.LVL1Score >= 70) {
             bfCutscene.loadFromFile("Chosen/Sound/Cutscene2/Rage of Sparta(MP3_320K).mp3");
             sCutscene.setBuffer(bfCutscene);
 
@@ -1968,7 +1968,7 @@ void LevelTwo(Player& player, Sprite Sprites[]) {
 
 
 
-    player.health = 30;
+    player.health = 10;
     player.groundHeight = -3500;
     player.GameOverTimer = 20;
     player.SurvivedTime = 0;
@@ -2104,7 +2104,7 @@ void LevelTwo(Player& player, Sprite Sprites[]) {
             GameOver(player);
         }
         // check win
-        if (player.SurvivedTime >= 5) {
+        if (player.SurvivedTime >= 90) {
             player.SurvivedTime += player.LVL1Score + player.LVL2Score;
             player.LVL2Score = 0;
             player.LVL1Score = 0;
@@ -2165,7 +2165,7 @@ void Completetion(Player &player) {
     
     Clock textClocks;
 
-    bfCompletion.loadFromFile("Chosen/Sound/Completion/Bear McCreary - The All-Father _ God of War Ragnarök (Original Soundtrack)(MP3_320K)-[AudioTrimmer.com]-[AudioTrimmer.com].mp3");
+    bfCompletion.loadFromFile("Chosen/Sound/Completion/Bear McCreary - The All-Father _ God of War RagnarÃ¶k (Original Soundtrack)(MP3_320K)-[AudioTrimmer.com]-[AudioTrimmer.com].mp3");
     SCompletion.setBuffer(bfCompletion);
 
     SCompletion.play();
